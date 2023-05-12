@@ -1,2 +1,2 @@
-# golang-bootcamp
-school21 golang bootcamp
+# School21 Golang BootCamp
+
