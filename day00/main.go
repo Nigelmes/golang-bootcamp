@@ -17,10 +17,10 @@ type flags struct {
 var fl flags
 
 func init() {
-	flag.BoolVar(&fl.mean, "mean", false, "test")
-	flag.BoolVar(&fl.median, "median", false, "test")
-	flag.BoolVar(&fl.mode, "mode", false, "test")
-	flag.BoolVar(&fl.sd, "sd", false, "test")
+	flag.BoolVar(&fl.mean, "mean", false, "mean flag")
+	flag.BoolVar(&fl.median, "median", false, "median flag")
+	flag.BoolVar(&fl.mode, "mode", false, "mode flag")
+	flag.BoolVar(&fl.sd, "sd", false, "sd flag")
 }
 
 func main() {
