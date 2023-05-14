@@ -31,5 +31,5 @@ func checkFormatFile(filename string) (string, error) {
 	if filepath.Ext(filename) == ".xml" {
 		return "xml", nil
 	}
-	return "", fmt.Errorf("ошибка: фай должен быть json или xml")
+	return "", fmt.Errorf("ошибка: файл должен быть json или xml")
 }

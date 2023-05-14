@@ -43,7 +43,7 @@ func (j jsonfile) Convert(recipes Recipes) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return string(res), err
+	return string(res), nil
 }
 
 type xmlfile string
@@ -65,7 +65,7 @@ func (x xmlfile) Convert(recipes Recipes) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return string(res), err
+	return string(res), nil
 }
 
 func ConvertingAndPrint(dbreader DBReader) {
