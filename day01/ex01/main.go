@@ -30,7 +30,6 @@ func checkFormatFile(f1, f2 string) error {
 	}
 	formatf1, formatf2 := filepath.Ext(f1), filepath.Ext(f2)
 	if formatf1 != ".json" && formatf1 != ".xml" || formatf2 != ".json" && formatf2 != ".xml" {
-		fmt.Println(formatf1, formatf2)
 		return fmt.Errorf("ошибка: файлы должны быть json или xml")
 	}
 	return nil
