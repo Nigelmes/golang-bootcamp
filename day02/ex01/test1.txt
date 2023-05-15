@@ -1,0 +1,2 @@
+Go Runtime Scheduler
+So to say, its job is to distribute runnable goroutines (G) over multiple worker OS threads (M) that run on one or more processors (P). Processors are handling multiple threads. Threads are handling multiple goroutines. Processors are hardware depended; the number of processors is set on the number of your CPU cores.
