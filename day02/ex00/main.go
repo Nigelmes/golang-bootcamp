@@ -28,9 +28,6 @@ func main() {
 	if err := checkFlag(); err != nil {
 		panic(err)
 	}
-	if _, err := os.Stat(fl.filepath); err != nil {
-		panic("ошибка: не существует такого католога")
-	}
 	err := filepath.Walk(fl.filepath, visit)
 	if err != nil {
 		panic(err)
@@ -40,6 +37,8 @@ func main() {
 func visit(path string, f os.FileInfo, err error) error {
 	if os.IsPermission(err) {
 		return filepath.SkipDir
+	} else if err != nil {
+		return err
 	}
 	if strings.HasPrefix(f.Name(), ".") {
 		if f.IsDir() {
