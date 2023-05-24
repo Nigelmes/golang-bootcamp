@@ -39,7 +39,7 @@ func (e *Elasticsearch) GetPlaces(limit int, offset int) ([]Place, int, error) {
 	}
 
 	req := esapi.SearchRequest{
-		Index:          []string{"places"}, // Замените на имя вашего индекса
+		Index:          []string{"places"},
 		Body:           strings.NewReader(string(queryJSON)),
 		TrackTotalHits: true,
 	}
