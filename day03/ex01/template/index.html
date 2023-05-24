@@ -18,8 +18,13 @@
         </li>
     {{end}}
 </ul>
-<a href="/?page=1">Previous</a>
-<a href="/?page=3">Next</a>
-<a href="/?page=1364">Last</a>
+{{if gt .Page 1}}
+    <a href="?page={{sub .Page  1}}">Previous</a>
+{{end}}
+
+{{if lt .Page .Last}}
+    <a href="?page={{sum .Page  1}}">Next</a>
+{{end}}
+<a href="/?page={{.Last}}">Last</a>
 </body>
 </html>
