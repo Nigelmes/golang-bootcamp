@@ -1,4 +1,4 @@
-module ex01
+module ex02
 
 go 1.19
 
